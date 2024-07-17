@@ -1,21 +1,3 @@
-import { motion } from "framer-motion";
-
-const draw = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: (i) => {
-    const delay = 1 + i * 0.5;
-    return {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { delay, duration: 0.01 }
-      }
-    };
-  }
-};
-
-
 function IndexComponent() {
   return (
     <div className="flex flex-col h-4/5 w-3/6 justify-center text-3xl">

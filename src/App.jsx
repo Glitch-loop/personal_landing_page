@@ -1,18 +1,31 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Hero from './layout/Hero'
 import WhoAmI from './layout/WhoAmI'
 import Section from './layout/Section'
+import Experience from './layout/Experience'
 
 function App() {
-
+  const [currentSection, setCurrentSection] = useState(0);
   return (
     <body className='overflow-x-hidden'>
-        <Section>
+        <Section
+          id={0}
+          setCurrentSection={setCurrentSection}
+        >
           <Hero />
         </Section>
-        <Section>
+        <Section
+          id={1}
+          setCurrentSection={setCurrentSection}
+        >
           <WhoAmI />
+        </Section>
+        <Section
+          id={2}
+          setCurrentSection={setCurrentSection}
+        >
+          <Experience />
         </Section>
         
       <div className="h-screen bg-blue-500 flex items-center justify-center section">

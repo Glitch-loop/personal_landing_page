@@ -1,8 +1,7 @@
-
-
-function Section({children}) {
+function Section({id, setCurrentSection, children}) {
   return (
-    <section className="section w-screen h-screen flex flex-col justify-center items-center">
+    <section 
+      className="section w-screen h-screen flex flex-col justify-center items-center">
       {children}
     </section>
   )
