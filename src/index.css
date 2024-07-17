@@ -2,8 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color: #D9D9D9;
-  background-color: #1E1E1E;
+html, body {
+  font-family: 'Inter', sans-serif;
+  color: #d9d9d9;
+  background-color: #1E1E1E; 
+  margin: 0;
+  padding: 0;
+  /* overflow-y: hidden; */
+  height: 100vh;
+  scroll-snap-type: y proximity;
+  /* scroll-behavior: smooth; */
 }
 
+
+.section {
+  /* height: 100vh; */
+  scroll-snap-align: start;
+}
+
+@keyframes fadeIn {
+  from {
+    color: rgba(217, 217, 217, 1)
+    /* opacity: 1; */
+  }
+  to {
+    color: rgba(217, 217, 217, 0.1)
+    /* opacity: 0.70; */
+  }
+}
+
+@keyframes highlight {
+  0% {
+    color: inherit;
+    color: rgba(217, 217, 217, 0.1)
+    /* opacity: 0.7; */
+  }
+  100% {
+    opacity: 1;
+    color: rgb(230, 126, 34);
+  }
+}
+
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-delay: 15s;
+  animation-duration: 2s;
+  animation-duration: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.highlight {
+  animation-name: highlight;
+  animation-delay: 16s;
+  animation-duration: 2s;
+  animation-direction: ease-in-out;
+  animation-fill-mode: forwards;
+}
