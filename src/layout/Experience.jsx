@@ -5,8 +5,7 @@ import Glossarycomponent from "../components/Glossarycomponent"
 
 
 function Experience() {
-  const [selectedExperience, setSelectedExperience] = useState(0)
-
+  const [selectedExperience, setSelectedExperience] = useState(-1)
   return(
     <div className="w-full h-full flex flex-row justify-center">
         <div className="w-full h-full flex flex-col basis-1/3">
@@ -16,7 +15,7 @@ function Experience() {
             </div>
           </div>
           <div className="ml-24 w-full flex basis-2/5 flex-row items-center">
-            <Glossarycomponent />
+            <Glossarycomponent state={selectedExperience} onSelect={setSelectedExperience}/>
           </div>
           <div className="w-full flex basis-2/5 flex-row items-end">
             <div className="w-full flex mb-24 ml-24">
