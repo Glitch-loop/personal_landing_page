@@ -21,13 +21,13 @@ const nodesExperience = [
     id: '3',
     type: 'circle_scholar_service',
     data: { label: 'Data'},
-    position: { x: 0, y: 400 },
+    position: { x: -300, y: 400 },
   },
   {
     id: '4',
     type: 'circle_side_project',
     data: { label: 'Hello'},
-    position: { x: 150, y: 500 },
+    position: { x: 300, y: 500 },
   },
 ];
 

@@ -3,8 +3,6 @@ import words from '../utils/words';
 import colors from "../utils/colors";
 
 const TypewriterComponent = () => {
-  console.log(words)
-  console.log("Hello")
   return (
     <div className="">
       <Typewriter
