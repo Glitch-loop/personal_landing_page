@@ -1,4 +1,4 @@
-import AboutMessageComponent from "../components/AboutMessageComponent"
+import RoadMap from "../components/RoadMap"
 import IndexComponent from "../components/IndexComponent"
 import Glossarycomponent from "../components/Glossarycomponent"
 
@@ -11,7 +11,7 @@ function Experience() {
               <span className="text-6xl">Experience</span>
             </div>
           </div>
-          <div className="mb-16 ml-24 w-full flex basis-1/3 flex-row items-center">
+          <div className="ml-24 w-full flex basis-1/3 flex-row items-center">
             <Glossarycomponent />
           </div>
           <div className="w-full flex basis-1/3 flex-row items-end">
@@ -21,7 +21,7 @@ function Experience() {
           </div>
         </div>
         <div className="w-full h-full flex basis-2/3 justify-center items-center">
-          <AboutMessageComponent />
+          <RoadMap />
         </div>
     </div>
   )

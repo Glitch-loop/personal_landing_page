@@ -1,7 +1,7 @@
 export default [
   '#E74C3C',
   '#E67E22',
-  '#F1C40F',
+  '#3498DB',
   '#2ECC71',
-  '#3498DB'
+  '#F1C40F',
 ]

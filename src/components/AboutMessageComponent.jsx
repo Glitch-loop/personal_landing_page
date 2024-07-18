@@ -2,29 +2,28 @@ import { motion } from 'framer-motion';
 
 const timmingHighlightText = {
   duration: 1,
-  delay: 10
+  delay: 5
 }
 
 function AboutMessageComponent() {
   return (
-    <div className="flex flex-col text-3xl">
+    <div className="flex flex-col text-3xl w-4/5 text-wrap">
       <motion.div 
         className="flex flex-col text-3xl"
         initial={{ color: "rgba(217, 217, 217, 1)" }}
         whileInView={{ color: "rgba(217, 217, 217, 0.1)" }}
         transition={{duration: 2, delay: 10}}
         viewport={{once: true}}
-        // className="fadeIn"
-        
       >
         <article 
-          className="flex flex-row w-3/5 text-wrap">
+          className="flex flex-row">
           <span>
               Back in 2018,
               <motion.span 
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
                 > 
                 I had the opportunity 
@@ -34,6 +33,7 @@ function AboutMessageComponent() {
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
                 > 
                 to help with small day-to-day problems. 
@@ -43,6 +43,7 @@ function AboutMessageComponent() {
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
                 > 
                 I knew 
@@ -52,6 +53,7 @@ function AboutMessageComponent() {
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
                 > my vocation is 
               </motion.span>
@@ -60,18 +62,20 @@ function AboutMessageComponent() {
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
               > 
                 the development of software systems. 
               </motion.span >
           </span>
         </article>
-        <article className="mt-5 flex flex-row w-3/5 text-wrap">
+        <article className="mt-5 flex flex-row">
           <span>
             <motion.span 
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
               >
               With 1 year of experience 
@@ -81,6 +85,7 @@ function AboutMessageComponent() {
                 initial={{ color: "rgba(217, 217, 217, 1)" }}
                 whileInView={{ color: "rgb(230, 126, 34, 1)"}}
                 transition={timmingHighlightText}
+                viewport={{once: true}}
                 className="mx-1"
               >
               of being able to see the impact of my work
@@ -90,6 +95,7 @@ function AboutMessageComponent() {
               initial={{ color: "rgba(217, 217, 217, 1)" }}
               whileInView={{ color: "rgb(230, 126, 34, 1)"}}
               transition={timmingHighlightText}
+              viewport={{once: true}}
               className="mx-1"
               >
               I am an engineer looking for new problems to solve and new opportunities to grow.

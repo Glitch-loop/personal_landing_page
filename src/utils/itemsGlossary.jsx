@@ -26,7 +26,7 @@ const itemsGlossary = [
     otherStyle: "my-2",
     radius: 12,
     text: "Side projects"
-  }, 
+  }
 ]
 
 export default itemsGlossary

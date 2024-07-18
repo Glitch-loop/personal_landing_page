@@ -1,13 +1,13 @@
+import colors from "../utils/colors"
 
-function ItemGlossary ({color, radius, otherStyle, text}) {
-  let style = `${color} w-${radius} h-${radius} rounded-full ${otherStyle}`
+function ItemGlossary ({idItem, text}) {
   return (
     <div>
-        <div className="flex flex-row items-center">
+        <div className="w-3/4 flex flex-row items-center">
           <div>
-            <div className={style}></div>
+            <div style={{background: colors[idItem]}} className="w-12 h-12 rounded-full my-2"></div>
           </div>
-          <span className="ml-2">{text}</span>
+          <span className="ml-2 text-wrap">{text}</span>
         </div>
     </div>
   )
