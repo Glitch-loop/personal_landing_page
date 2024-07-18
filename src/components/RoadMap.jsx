@@ -31,8 +31,6 @@ const rfStyle = {
 function RoadMap({edges, nodes}) {
   // const [nodes, setNodes, onNodesChange] = useNodesState(nodesExperience);
   // const [edges, setEdges, onEdgesChange] = useEdgesState(edgesExperience);
-  console.log(edges)
-  console.log(nodes)
   return (
     <div 
       className='w-11/12 h-5/6 outline outline-1 outline-base-color'

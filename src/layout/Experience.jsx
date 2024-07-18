@@ -16,14 +16,36 @@ function Experience() {
     if (elementRef.current) {
       const { width } = elementRef.current.getBoundingClientRect();
       
+      let nodesToShow = nodesExperience
+      console.log("selectedExperience: ", selectedExperience)
+      if (selectedExperience == 0){ // Only internship experience
+        
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
+        })
+          
+      } else if(selectedExperience == 1) { // Only scholar service
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
+        })
+      } else if(selectedExperience == 2) { // Only Education service
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
+        })
+      } else if(selectedExperience == 3) { // Only certifications project
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
+        })
+      }
 
-      console.log("Output nodes: ", generateCoordinates(nodesExperience, width))
+      // console.log("Output nodes: ", generateCoordinates(nodesToShow, width))
       // Creating the coordinates of the nodes
-      setNodesExperienceState(generateCoordinates(nodesExperience, width))
+      setNodesExperienceState(generateCoordinates(nodesToShow, width))
 
       // Creating the edges of the nodes
-      console.log("Output edges: ", generateEdges(nodesExperience))
-      setEdgesExperienceState(generateEdges(nodesExperience))
+      // console.log("Output edges: ", generateEdges(nodesToShow))
+      setEdgesExperienceState(generateEdges(nodesToShow))
+
     }
   }, [selectedExperience]);
   
