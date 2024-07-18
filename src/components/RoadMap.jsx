@@ -1,55 +1,54 @@
-import { ReactFlow, Controls, Background, BackgroundVariant } from '@xyflow/react';
+import { 
+  ReactFlow, 
+  Controls, 
+  Background, 
+  BackgroundVariant,
+  useNodesState,
+  useEdgesState,
+  addEdge,
+} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import colors from '../utils/colors';
-import CircleNode from './CircleNode';
-import ButtonEdge from './ButtonEdge';
-import nodesExperience from '../utils/nodesExperience';
+
+import {nodesExperience, edgesExperience} from '../utils/roadMapData';
+import CircleNodeEducation from './circlesTimeLine/CircleNodeEducation';
+import CircleNodeInternship from './circlesTimeLine/CircleNodeInternship';
+import CircleNodeScholarService from './circlesTimeLine/CircleNodeScholarService';
+import CircleNodeSideProject from './circlesTimeLine/CircleNodeSideProject';
+import CircleNodeToday from './circlesTimeLine/CircleNodeToday';
 
 const nodeTypes = {
-  circle: CircleNode,
+  circle_education: CircleNodeEducation,
+  circle_internship: CircleNodeInternship,
+  circle_scholar_service: CircleNodeScholarService,
+  circle_side_project: CircleNodeSideProject,
+  circle_today: CircleNodeToday,
 };
-
-
-
-
-const edges = [{ 
-  id: '1-2', source: '1', target: '2' ,
-  // style: { stroke: 'rgb(158, 118, 255)', strokeWidth: 5 },
-}];
-
-const edgeTypes = {
-  button: ButtonEdge,
-};
-
 
 const rfStyle = {
   background: "#1E1E1E"
 }
 
 function RoadMap() {
+  const [nodes, setNodes, onNodesChange] = useNodesState(nodesExperience);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(edgesExperience);
   return (
     <div 
-      className='w-full h-full'
-    // style={{ height: '100%', width: '100%' }}
+      className='w-11/12 h-5/6 outline outline-1 outline-base-color'
     >
       <ReactFlow 
-        nodes={nodesExperience} 
+        nodes={nodes} 
         edges={edges}
         style={rfStyle}
         nodeTypes={nodeTypes}
-        edgeTypes={edgeTypes}
         fitView
         panOnScroll
         panOnDrag={false}
         preventScrolling={false}
         > 
         <Background 
-          variant={
-            BackgroundVariant.Dots
-          }
           color='#1E1E1E'
         />
-        {/* <Controls /> */}
+        <Controls />
       </ReactFlow>
     </div>
   );
