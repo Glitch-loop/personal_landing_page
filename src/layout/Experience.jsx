@@ -15,36 +15,42 @@ function Experience() {
   useEffect(() => {
     if (elementRef.current) {
       const { width } = elementRef.current.getBoundingClientRect();
+      console.log("++++++++++++++++++++++++++Calculate paramas+++++++++++++++++++++++++++++")
       
-      let nodesToShow = nodesExperience
-      console.log("selectedExperience: ", selectedExperience)
-      if (selectedExperience == 0){ // Only internship experience
-        
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
-        })
-          
-      } else if(selectedExperience == 1) { // Only scholar service
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
-        })
-      } else if(selectedExperience == 2) { // Only Education service
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
-        })
-      } else if(selectedExperience == 3) { // Only certifications project
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
-        })
+      if (selectedExperience == -1) {
+        // Creating the coordinates of the nodes
+        setNodesExperienceState(generateCoordinates(nodesExperience, width))
+  
+        // Creating the edges of the nodes
+        setEdgesExperienceState(generateEdges(nodesExperience))
+      } else {
+        let nodesToShow = []
+        if (selectedExperience == 0){ // Only internship experience
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
+          })
+        } else if(selectedExperience == 1) { // Only scholar service
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
+          })
+        } else if(selectedExperience == 2) { // Only Education service
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
+          })
+        } else if(selectedExperience == 3) { // Only certifications project
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
+          })
+        }
+
+        let sortedNodesToShow = nodesToShow.sort()
+        // Creating the coordinates of the nodes
+        setNodesExperienceState(generateCoordinates(sortedNodesToShow, width))
+  
+        // Creating the edges of the nodes
+        setEdgesExperienceState(generateEdges(sortedNodesToShow))
       }
-
-      // console.log("Output nodes: ", generateCoordinates(nodesToShow, width))
-      // Creating the coordinates of the nodes
-      setNodesExperienceState(generateCoordinates(nodesToShow, width))
-
-      // Creating the edges of the nodes
-      // console.log("Output edges: ", generateEdges(nodesToShow))
-      setEdgesExperienceState(generateEdges(nodesToShow))
+      
 
     }
   }, [selectedExperience]);

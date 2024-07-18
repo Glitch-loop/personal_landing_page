@@ -7,14 +7,15 @@ function generateCoordinates(items, limit) {
   // Boundaries for vertical number
   let lowNumer = 0
   let highNumer = 0
-  console.log(limit)
   for(let i = 0; i < items.length; i++) {
     items[i].position.x = getRandomNumber(limit * -1, limit)
     items[i].position.y = getRandomNumber(lowNumer, highNumer)
+    
+    console.log(items[i].position.y)
 
-    lowNumer = items[i].position.y + 50
-    lowNumer += 50
-    highNumer += 150
+    lowNumer =  items[i].position.y + 100
+    // lowNumer += 50 // This might be an option, but it is possible the overlapping of edges
+    highNumer = items[i].position.y + 200
   }
 
   return items
