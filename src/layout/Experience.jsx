@@ -15,12 +15,21 @@ function Experience() {
     = useState(generateCoordinates(nodesExperience, 300))
   const [edgesExperienceStateFull, setEdgesExperienceStateFull] = 
   useState(generateEdges(nodesExperience))
+  const [screenWidth, setScreenWidth] = useState(150)
 
   const elementRef = useRef(null);
 
   useEffect(() => {
     if (elementRef.current) {
       const { width } = elementRef.current.getBoundingClientRect();      
+      
+      setScreenWidth(width)
+      if (width < 300) {
+        setScreenWidth(150)
+      } else {
+        setScreenWidth(500)
+      }
+
       if (selectedExperience == -1) {
         // // Creating the coordinates of the nodes
         // setNodesExperienceStateFull(generateCoordinates(nodesExperience, width))
@@ -105,8 +114,14 @@ function Experience() {
               <RoadMap nodes={[]} edges={[]}/>
             } */}
             { selectedExperience == -1 ?
-              <RoadMap nodes={nodesExperienceStateFull} edges={edgesExperienceStateFull}/>:
-              <RoadMap nodes={nodesExperienceState} edges={edgesExperienceState}/>
+              <RoadMap 
+                nodes={nodesExperienceStateFull} 
+                edges={edgesExperienceStateFull} 
+                secreenWidth={screenWidth}/>:
+              <RoadMap 
+                nodes={nodesExperienceState} 
+                edges={edgesExperienceState}
+                secreenWidth={screenWidth}/>
             }
       </div>
     </div>

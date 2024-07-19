@@ -28,7 +28,7 @@ const rfStyle = {
   background: "#1E1E1E"
 }
 
-function RoadMap({edges, nodes}) {
+function RoadMap({secreenWidth, edges, nodes}) {
   // const [nodes, setNodes, onNodesChange] = useNodesState(nodesExperience);
   // const [edges, setEdges, onEdgesChange] = useEdgesState(edgesExperience);
   return (
@@ -53,7 +53,9 @@ function RoadMap({edges, nodes}) {
         // }}
         // fitView
         // defaultViewport={{x:500, y:100, zoom: 0}}
-        defaultViewport={{x:150, y:100, zoom: -5}}
+        defaultViewport={{
+          x: secreenWidth, y:100, zoom: -5
+        }}
         > 
         <Background 
           color='#1E1E1E'
