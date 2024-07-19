@@ -41,7 +41,7 @@ function RoadMap({secreenWidth, edges, nodes}) {
         style={rfStyle}
         nodeTypes={nodeTypes}
         panOnScroll
-        panOnDrag={false}
+        panOnDrag={true}
         preventScrolling={false}
         // fitView
         // fitViewOptions={{

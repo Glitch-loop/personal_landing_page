@@ -1,9 +1,11 @@
-function Section({id, setCurrentSection, children}) {
+function Section({id, children}) {
   return (
-    <section 
+    <div
+      onMouseEnter={() => {console.log(id)}}
+      id={id}
       className="section w-screen h-screen flex flex-col justify-center items-center">
       {children}
-    </section>
+    </div>
   )
 }
 

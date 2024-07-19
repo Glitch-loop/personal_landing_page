@@ -6,30 +6,32 @@ import Section from './layout/Section'
 import Experience from './layout/Experience'
 import Skills from './layout/Skills'
 
+
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
   return (
     <body className='overflow-x-hidden'>
+        
         <Section
-          id={0}
+          id="section0"
           setCurrentSection={setCurrentSection}
         >
           <Hero />
         </Section>
         <Section
-          id={1}
+          id="section1"
           setCurrentSection={setCurrentSection}
         >
           <WhoAmI />
         </Section>
         <Section
-          id={2}
+          id="section2"
           setCurrentSection={setCurrentSection}
         >
           <Experience />
         </Section>
         <Section
-          id={3}
+          id="section3"
           setCurrentSection={setCurrentSection}
           >
           <Skills />
