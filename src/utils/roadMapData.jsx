@@ -26,7 +26,7 @@ const nodesExperience = [
   {
     id: '4',
     type: 'circle_education',
-    data: { label: 'AWS Cloud Practitioner Essentials - March 2024'},
+    data: { label: 'AWS Cloud Practitioner Essentials - May 2024'},
     position: { x: 300, y: 500 },
   },
   {

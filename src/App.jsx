@@ -22,18 +22,18 @@ function App() {
         >
           <WhoAmI />
         </Section> */}
-        <Section
+        {/* <Section
           id={2}
           setCurrentSection={setCurrentSection}
         >
           <Experience />
-        </Section>
-        {/* <Section
+        </Section> */}
+        <Section
           id={3}
           setCurrentSection={setCurrentSection}
         >
           <Skills />
-        </Section> */}
+        </Section>
     </body>
   )
 }
