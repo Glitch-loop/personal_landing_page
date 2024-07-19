@@ -7,7 +7,7 @@ import { generateCoordinates, generateEdges } from "../utils/utilsFunctions"
 import { motion } from "framer-motion"
 import TitleSection from "../components/TitleSection"
 
-function Experience() {
+function Experience({currentSection}) {
   const [selectedExperience, setSelectedExperience] = useState(-1)
   const [nodesExperienceState, setNodesExperienceState] = useState([])
   const [edgesExperienceState, setEdgesExperienceState] = useState([])
@@ -105,7 +105,8 @@ function Experience() {
           ml-10 
           md:ml-16
           `}>
-            <IndexComponent />
+            <IndexComponent 
+              currentSection={currentSection}/>
         </div>
       </div>
       <div className="w-full h-full flex basis-2/3 justify-center items-center">

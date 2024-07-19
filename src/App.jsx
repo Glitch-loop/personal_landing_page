@@ -8,10 +8,9 @@ import Skills from './layout/Skills'
 
 
 function App() {
-  const [currentSection, setCurrentSection] = useState(0);
+  const [currentSection, setCurrentSection] = useState("section0");
   return (
     <body className='overflow-x-hidden'>
-        
         <Section
           id="section0"
           setCurrentSection={setCurrentSection}
@@ -22,19 +21,26 @@ function App() {
           id="section1"
           setCurrentSection={setCurrentSection}
         >
-          <WhoAmI />
+          <WhoAmI 
+            currentSection={currentSection}
+            setCurrentSection={setCurrentSection}
+          />
         </Section>
         <Section
           id="section2"
           setCurrentSection={setCurrentSection}
         >
-          <Experience />
+          <Experience 
+            currentSection={currentSection}
+            setCurrentSection={setCurrentSection}/>
         </Section>
         <Section
           id="section3"
           setCurrentSection={setCurrentSection}
           >
-          <Skills />
+          <Skills 
+            currentSection={currentSection}
+            setCurrentSection={setCurrentSection}/>
         </Section>
     </body>
   )

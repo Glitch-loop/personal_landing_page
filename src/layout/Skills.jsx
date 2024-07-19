@@ -2,7 +2,7 @@ import IndexComponent from "../components/IndexComponent"
 import SkillsContainer from "../components/SkillsContainer"
 import TitleSection from "../components/TitleSection"
 
-function Skill() {
+function Skill({currentSection}) {
   return(
     <div className="w-full h-full flex flex-col md:flex-row justify-center">
       <div className={`
@@ -26,7 +26,8 @@ function Skill() {
           ml-14
           md:ml-28
           `}>
-            <IndexComponent />
+            <IndexComponent 
+              currentSection={currentSection}/>
         </div>
         <div className="hidden md:flex basis-1/5"></div>
       </div>

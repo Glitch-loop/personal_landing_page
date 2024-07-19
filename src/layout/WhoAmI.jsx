@@ -2,7 +2,7 @@ import AboutMessageComponent from "../components/AboutMessageComponent"
 import IndexComponent from "../components/IndexComponent"
 import TitleSection from "../components/TitleSection"
 
-function WhoAmI() {
+function WhoAmI({currentSection}) {
   return(
     <div className="w-full h-full flex flex-col md:flex-row justify-center">
       <div className="w-full h-full flex flex-col basis-1/5 justify-center md:justify-start md:basis-1/3">
@@ -20,7 +20,9 @@ function WhoAmI() {
           ml-14
           md:ml-28
           `}>
-            <IndexComponent />
+            <IndexComponent 
+              currentSection={currentSection}
+            />
         </div>
         <div className="hidden md:basis-1/5"></div>
       </div>
