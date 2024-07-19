@@ -11,17 +11,22 @@ function Experience() {
   const [selectedExperience, setSelectedExperience] = useState(-1)
   const [nodesExperienceState, setNodesExperienceState] = useState([])
   const [edgesExperienceState, setEdgesExperienceState] = useState([])
+  const [nodesExperienceStateFull, setNodesExperienceStateFull] 
+    = useState(generateCoordinates(nodesExperience, 500))
+  const [edgesExperienceStateFull, setEdgesExperienceStateFull] = 
+  useState(generateEdges(nodesExperience))
+
   const elementRef = useRef(null);
 
   useEffect(() => {
     if (elementRef.current) {
       const { width } = elementRef.current.getBoundingClientRect();      
       if (selectedExperience == -1) {
-        // Creating the coordinates of the nodes
-        setNodesExperienceState(generateCoordinates(nodesExperience, width))
+        // // Creating the coordinates of the nodes
+        // setNodesExperienceStateFull(generateCoordinates(nodesExperience, width))
   
-        // Creating the edges of the nodes
-        setEdgesExperienceState(generateEdges(nodesExperience))
+        // // Creating the edges of the nodes
+        // setEdgesExperienceStateFull(generateEdges(nodesExperience))
       } else {
         let nodesToShow = []
         if (selectedExperience == 0){ // Only internship experience
@@ -94,7 +99,10 @@ function Experience() {
           </div>
         </div>
         <div className="w-full h-full flex basis-2/3 justify-center items-center">
-          <RoadMap nodes={nodesExperienceState} edges={edgesExperienceState}/>
+              { selectedExperience == -1 ?
+                <RoadMap nodes={nodesExperienceStateFull} edges={edgesExperienceStateFull}/>:
+                <RoadMap nodes={nodesExperienceState} edges={edgesExperienceState}/>
+              }
         </div>
     </div>
   )

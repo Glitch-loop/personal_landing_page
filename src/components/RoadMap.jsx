@@ -40,10 +40,18 @@ function RoadMap({edges, nodes}) {
         edges={edges}
         style={rfStyle}
         nodeTypes={nodeTypes}
-        fitView
         panOnScroll
         panOnDrag={false}
         preventScrolling={false}
+        // fitView
+        // fitViewOptions={{
+        //   padding: 0,
+        //   maxZoom: 50,
+        //   minZoom: -50,
+        //   // duration: 5,
+        //   nodes: nodes[0]
+        // }}
+        defaultViewport={{x:500, y:100, zoom: 0}}
         > 
         <Background 
           color='#1E1E1E'
