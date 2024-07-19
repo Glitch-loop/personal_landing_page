@@ -4,7 +4,10 @@ import itemsGlossary from "../utils/itemsGlossary";
 
 function Glossarycomponent({state, onSelect}) {
   return (
-    <motion.div className="flex flex-col h-full w-full justify-center lg:text-xl xl:text-3xl">
+    <motion.div 
+      className={`
+          flex flex-col
+        `}>
         {itemsGlossary.map(item => (
           <motion.div
             key={item.id}

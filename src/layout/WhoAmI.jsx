@@ -17,7 +17,6 @@ function WhoAmI() {
           <div className={`
             hidden
             md:flex basis-2/5 w-full items-end  justify-start
-
             ml-14
             md:ml-28
             `}>
