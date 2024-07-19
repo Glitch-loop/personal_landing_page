@@ -2,10 +2,14 @@
 
 function TitleSection({title, children}) {
   return (
-    <span className="text-4xl ">
-    {title}
-    {children}
-    </span>
+      <span className={`
+        text-base
+        md:text-2xl 
+        lg:text-4xl 
+        `}>
+        {title}
+        {children}
+      </span>
   )
 }
 

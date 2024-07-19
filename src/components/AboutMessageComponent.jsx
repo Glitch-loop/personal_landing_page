@@ -7,7 +7,7 @@ const timmingHighlightText = {
 
 function AboutMessageComponent() {
   return (
-    <div className="flex flex-col lg:text-xl xl:text-3xl w-4/5 text-wrap">
+    <div className="flex flex-col w-4/5">
       <motion.div 
         className="flex flex-col"
         initial={{ color: "rgba(217, 217, 217, 1)" }}
@@ -103,7 +103,7 @@ function AboutMessageComponent() {
           </span>
         </article>
       </motion.div>
-      <article className="mt-10 flex flex-col w-3/5 text-wrap">
+      <article className="mt-10 flex flex-col text-wrap">
         <span className="">
           Every problem is an opportunity in disguise. 
         </span>

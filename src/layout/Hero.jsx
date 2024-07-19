@@ -1,6 +1,6 @@
 
 import StartButtom from "../components/StartButtom";
-import TypewriterComponent from "../components/TypewriterComponent";
+import TypewriterComponent from "../components/heroComponents/TypewriterComponent";
 
 function Hero() {
   return (

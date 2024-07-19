@@ -1,6 +1,6 @@
 import Typewriter from 'typewriter-effect';
-import words from '../utils/words';
-import colors from "../utils/colors";
+import words from '../../utils/words';
+import colors from "../../utils/colors";
 
 const TypewriterComponent = () => {
   return (
