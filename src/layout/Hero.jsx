@@ -1,6 +1,5 @@
 
 import StartButtom from "../components/StartButtom";
-// import TypewriterComponent from "typewriter-effect";
 import TypewriterComponent from "../components/TypewriterComponent";
 
 function Hero() {

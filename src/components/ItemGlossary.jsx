@@ -18,7 +18,7 @@ function ItemGlossary ({idItem, state, text}) {
       className={style}
       >
       <div>
-        <div style={{background: colors[idItem]}} className="w-12 h-12 rounded-full my-3"></div>
+        <div style={{background: colors[idItem]}} className="w-10 h-10 xl:w-12 xl:h-12 rounded-full my-3"></div>
       </div>
       <span className="ml-2 text-wrap">{text}</span>
     </motion.div>

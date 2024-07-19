@@ -4,7 +4,7 @@ import IndexComponent from "../components/IndexComponent"
 import Glossarycomponent from "../components/Glossarycomponent"
 import { nodesExperience } from "../utils/roadMapData"
 import { generateCoordinates, generateEdges } from "../utils/utilsFunctions"
-
+import { motion } from "framer-motion"
 
 function Experience() {
   const [selectedExperience, setSelectedExperience] = useState(-1)
@@ -14,9 +14,7 @@ function Experience() {
 
   useEffect(() => {
     if (elementRef.current) {
-      const { width } = elementRef.current.getBoundingClientRect();
-      console.log("++++++++++++++++++++++++++Calculate paramas+++++++++++++++++++++++++++++")
-      
+      const { width } = elementRef.current.getBoundingClientRect();      
       if (selectedExperience == -1) {
         // Creating the coordinates of the nodes
         setNodesExperienceState(generateCoordinates(nodesExperience, width))
@@ -55,14 +53,21 @@ function Experience() {
     }
   }, [selectedExperience]);
   
-
-
   return(
     <div className="w-full h-full flex flex-row justify-center">
         <div className="w-full h-full flex flex-col basis-1/3">
           <div className="flex basis-1/5 flex-row  items-start">
-            <div className="mt-24 ml-24">
-              <span className="text-6xl">Experience</span>
+            <div className="mt-20 ml-24">
+              <span className="text-4xl">
+                Experience 
+                <motion.span 
+                  initial={{ color: "rgba(217, 217, 217, 0)" }}
+                  whileInView={{ color: "rgba(217, 217, 217, 1)" }}
+                  transition={{duration: 5}}
+                  viewport={{once: true}}
+                  className="ml-2 italic"
+                >& more</motion.span>
+                </span>
             </div>
           </div>
           <div 

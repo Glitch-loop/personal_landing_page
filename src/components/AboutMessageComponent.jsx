@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 
 const timmingHighlightText = {
-  duration: 1,
-  delay: 5
+  duration: 2,
+  delay: 10
 }
 
 function AboutMessageComponent() {
   return (
-    <div className="flex flex-col text-3xl w-4/5 text-wrap">
+    <div className="flex flex-col lg:text-xl xl:text-3xl w-4/5 text-wrap">
       <motion.div 
-        className="flex flex-col text-3xl"
+        className="flex flex-col"
         initial={{ color: "rgba(217, 217, 217, 1)" }}
         whileInView={{ color: "rgba(217, 217, 217, 0.1)" }}
         transition={{duration: 2, delay: 10}}

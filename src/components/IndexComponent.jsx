@@ -1,6 +1,6 @@
 function IndexComponent() {
   return (
-    <div className="flex flex-col h-4/5 w-3/6 justify-center text-3xl">
+    <div className="flex flex-col h-4/5 w-3/6 justify-center lg:text-base xl:text-2xl">
         <div className="my-2">
           <span>Who am I?</span>
           <div className="bg-base-color w-full h-1 rounded-full mt-2"></div>

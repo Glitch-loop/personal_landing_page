@@ -11,8 +11,6 @@ function generateCoordinates(items, limit) {
     items[i].position.x = getRandomNumber(limit * -1, limit)
     items[i].position.y = getRandomNumber(lowNumer, highNumer)
     
-    console.log(items[i].position.y)
-
     lowNumer =  items[i].position.y + 100
     // lowNumer += 50 // This might be an option, but it is possible the overlapping of edges
     highNumer = items[i].position.y + 200
