@@ -97,7 +97,6 @@ function Experience() {
           md:ml-16
           `}>
             <IndexComponent />
-
         </div>
       </div>
       <div className="w-full h-full flex basis-2/3 justify-center items-center">

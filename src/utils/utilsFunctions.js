@@ -8,8 +8,15 @@ function generateCoordinates(items, limit) {
   let lowNumer = 0
   let highNumer = 0
   for(let i = 0; i < items.length; i++) {
-    items[i].position.x = getRandomNumber(limit * -1, limit)
-    items[i].position.y = getRandomNumber(lowNumer, highNumer)
+
+    if(items[i].id === '0') { // First node that indicates "today"
+      items[i].position.x = 0
+      items[i].position.y = 0
+    } else {
+      items[i].position.x = getRandomNumber(limit * -1, limit)
+      items[i].position.y = getRandomNumber(lowNumer, highNumer)
+    }
+    
     
     lowNumer =  items[i].position.y + 100
     // lowNumer += 50 // This might be an option, but it is possible the overlapping of edges

@@ -51,7 +51,9 @@ function RoadMap({edges, nodes}) {
         //   // duration: 5,
         //   nodes: nodes[0]
         // }}
-        defaultViewport={{x:500, y:100, zoom: 0}}
+        // fitView
+        // defaultViewport={{x:500, y:100, zoom: 0}}
+        defaultViewport={{x:150, y:100, zoom: -5}}
         > 
         <Background 
           color='#1E1E1E'
