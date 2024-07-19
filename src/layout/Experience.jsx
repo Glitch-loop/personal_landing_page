@@ -5,6 +5,7 @@ import Glossarycomponent from "../components/Glossarycomponent"
 import { nodesExperience } from "../utils/roadMapData"
 import { generateCoordinates, generateEdges } from "../utils/utilsFunctions"
 import { motion } from "framer-motion"
+import TitleSection from "../components/TitleSection"
 
 function Experience() {
   const [selectedExperience, setSelectedExperience] = useState(-1)
@@ -58,8 +59,18 @@ function Experience() {
         <div className="w-full h-full flex flex-col basis-1/3">
           <div className="flex basis-1/5 flex-row  items-start">
             <div className="mt-20 ml-24">
-              <span className="text-4xl">
-                Experience 
+              <TitleSection
+               title={"Experience"}>
+              <motion.span 
+                initial={{ color: "rgba(217, 217, 217, 0)" }}
+                whileInView={{ color: "rgba(217, 217, 217, 1)" }}
+                transition={{duration: 5}}
+                viewport={{once: true}}
+                className="ml-2 italic"
+              >& more</motion.span>
+              </TitleSection>
+              {/* <span className="text-4xl">
+                
                 <motion.span 
                   initial={{ color: "rgba(217, 217, 217, 0)" }}
                   whileInView={{ color: "rgba(217, 217, 217, 1)" }}
@@ -67,7 +78,7 @@ function Experience() {
                   viewport={{once: true}}
                   className="ml-2 italic"
                 >& more</motion.span>
-                </span>
+                </span> */}
             </div>
           </div>
           <div 

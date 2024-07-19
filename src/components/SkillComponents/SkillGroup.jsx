@@ -11,7 +11,7 @@ function SkillGroup({skills}) {
       { skills.map(skill => (
         <div className="w-full h-full flex flex-col">
           <span className="mb-3">{skill.groupName}</span>
-          <div className="w-full h-full flex flex-row">
+          <div className="max-h-28 w-full h-full flex flex-row  justify-around text-center">
             { skill.set.map(item =>  {
               if (skill.groupDesign == 0){
                 return <SkillItemBlue 

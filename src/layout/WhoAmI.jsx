@@ -1,5 +1,6 @@
 import AboutMessageComponent from "../components/AboutMessageComponent"
 import IndexComponent from "../components/IndexComponent"
+import TitleSection from "../components/TitleSection"
 
 function WhoAmI() {
   return(
@@ -7,7 +8,7 @@ function WhoAmI() {
         <div className="w-full h-full flex flex-col basis-1/3">
           <div className="flex basis-1/2 flex-row  items-start">
             <div className="mt-24 ml-24">
-              <span className="text-6xl">Who am I?</span>
+              <TitleSection title={"Who am I?"} />
             </div>
           </div>
           <div className="w-full flex basis-1/2 flex-row items-end">
