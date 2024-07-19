@@ -26,7 +26,7 @@ function SkillItemRed({skillName, expertise}) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleSelect}
-        className={!isSelected ? `bg-transparent flex basis-3/4 items-center justify-center w-20 h-20 outline outline-2 outline-project-color-red text-project-color-red rounded-full hover:outline-1 hover:bg-project-color-red hover:text-background-color  duration-200 text-base text-center` : `w-20 h-20 bg-project-color-red rounded-full flex flex-row items-center justify-center text-base text-center text-background-color`}
+        className={!isSelected ? `cursor-pointer bg-transparent flex basis-3/4 items-center justify-center w-20 h-20 outline outline-2 outline-project-color-red text-project-color-red rounded-full hover:outline-1 hover:bg-project-color-red hover:text-background-color  duration-200 text-base text-center` : `cursor-pointer w-20 h-20 bg-project-color-red rounded-full flex flex-row items-center justify-center text-base text-center text-background-color`}
         >
         { (!isHovered && !isSelected) ? <span>{skillName}</span> :
           <span className='text-2xl font-bold'>{expertise}%</span>
