@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 function StartButtom() {
   return (
     <div 
-      className="flex justify-center items-center w-24 h-24  rounded-full bg-base-color text-background-color text-5xl "
+      className={`
+        flex justify-center items-center 
+        rounded-full bg-base-color text-background-color
+        w-10 h-10
+        md:w-16 md:h-16
+        lg:w-24 lg:h-24
+        
+        `}
       >
         <FontAwesomeIcon icon={faAnglesRight} />
     </div>

@@ -16,7 +16,7 @@ function App() {
         >
           <Hero />
         </Section>
-        {/* <Section
+        <Section
           id={1}
           setCurrentSection={setCurrentSection}
         >
@@ -27,7 +27,7 @@ function App() {
           setCurrentSection={setCurrentSection}
         >
           <Experience />
-        </Section> */}
+        </Section>
         <Section
           id={3}
           setCurrentSection={setCurrentSection}
