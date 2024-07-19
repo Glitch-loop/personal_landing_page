@@ -22,18 +22,21 @@ function SkillsContainer() {
   },[itemSelected])
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
-      <div className="w-full flex basis-1/5">
+    <div className="w-full h-full flex flex-col items-center justify-start md:justify-center">
+      <div 
+      className="w-full flex basis-1/12 justify-center md:justify-start"
+      >
         <SkillNavBar 
           itemSelected={itemSelected}
           onSelectItem={setItemSelected}
           />
       </div>
-      <div className="w-full h-full flex basis-4/5">
+      <div 
+        className="w-full h-full flex basis-8/12"
+        >
         <SkillGroup 
           skills={skillsToshow}
           /> 
-        
       </div>
     </div>
   )

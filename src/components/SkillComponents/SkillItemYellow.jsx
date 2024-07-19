@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import { skillVariants } from "../../utils/skillsVariants";
 
 function SkillItemYellow({idSkill, skillName, expertise}) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHoveyellow, setIsHoveyellow] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    setIsHoveyellow(true);
   };
-  
+
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    setIsHoveyellow(false);
   };
 
   const handleSelect = () => {
@@ -20,30 +20,62 @@ function SkillItemYellow({idSkill, skillName, expertise}) {
 
   return (
     <div className="flex flex-col w-full h-full justify-center items-center">
-      <motion.div
-        whileHover={{scale: 1.2 }}
-        whileTap={{scale: 0.9 }}
-        transition={{duration: 0.1}}
-        initial="closed"
-        whileInView="open"
-        variants={skillVariants}
-        custom={idSkill}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleSelect}
-        className={!isSelected ? `cursor-pointer bg-transparent flex basis-3/4 items-center justify-center w-20 h-20 outline outline-2 outline-project-color-yellow text-project-color-yellow rounded-full hover:outline-1 hover:bg-project-color-yellow hover:text-background-color  duration-200 text-base text-center` : `cursor-pointer w-20 h-20 bg-project-color-yellow rounded-full flex flex-row items-center justify-center text-base text-center text-background-color`}
-        >
-        { (!isHovered && !isSelected) ? <span>{skillName}</span> :
-          <span className='text-2xl font-bold'>{expertise}%</span>
-        }
-      </motion.div>
+      <div>
+        <motion.div
+          whileHover={{scale: 1.2 }}
+          whileTap={{scale: 0.9 }}
+          transition={{duration: 0.1}}
+          initial="closed"
+          whileInView="open"
+          variants={skillVariants}
+          custom={idSkill}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onClick={handleSelect}
+          className={!isSelected 
+            ? `
+            cursor-pointer bg-transparent text-center
+            outline outline-2 outline-project-color-yellow text-project-color-yellow rounded-full 
+            
+            w-14 h-14
+            md:w-20 md:h-20
+            
+            flex basis-3/4 items-center justify-center
+
+            text-xs
+            md:text-base 
+
+            hover:outline-1 hover:bg-project-color-yellow hover:text-background-color duration-200 
+            ` 
+            : `
+            cursor-pointer bg-project-color-yellow rounded-full text-center text-background-color
+            
+            w-14 h-14
+            md:w-20 md:h-20
+
+            text-xs
+            md:text-base
+
+            flex flex-row items-center justify-center
+            `}
+          >
+          { (!isHoveyellow && !isSelected) ? <span>{skillName}</span> :
+            <span className='text-lg md:text-2xl font-bold'>{expertise}%</span>
+          }
+        </motion.div>
+      </div>
       <div className="flex flex-row w-full basis-1/4 justify-center">
         { isSelected &&
           <motion.span 
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 0.5}}
-            className="flex flex-row w-full  items-center justify-center text-project-color-yellow text-center text-wrap"
+            className={`
+              w-full text-project-color-yellow text-center text-wrap
+              flex flex-row  items-center justify-center
+              text-xs
+              md:text-base 
+            `}
             >{skillName}</motion.span>
         }
       </div>

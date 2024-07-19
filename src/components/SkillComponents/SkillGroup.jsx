@@ -12,8 +12,8 @@ function SkillGroup({skills}) {
         <div
         key={skill.groupName} 
         className="w-full h-full flex flex-col">
-          <span className="mb-3">{skill.groupName}</span>
-          <div className="max-h-28 w-full h-full flex flex-row justify-around text-center">
+          <span className={`ml-2 md:ml-0 mb-3 text-sm md:text-xl`}>{skill.groupName}</span>
+          <div className="max-h-56 w-full h-full flex flex-row justify-around text-center flex-auto">
             { skill.set.map(item =>  {
               if (skill.groupDesign == 0){
                 return <SkillItemBlue 
@@ -37,7 +37,7 @@ function SkillGroup({skills}) {
                     expertise={item.expertise} 
                     />
                 }else if (skill.groupDesign == 3){
-                  return <SkillItemYellow 
+                  return <SkillItemRed 
                     key={item.skillName}
                     idSkill={item.idSkill}
                     skillName={item.skillName} 

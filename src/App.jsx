@@ -10,7 +10,7 @@ function App() {
   const [currentSection, setCurrentSection] = useState(0);
   return (
     <body className='overflow-x-hidden'>
-        {/* <Section
+        <Section
           id={0}
           setCurrentSection={setCurrentSection}
         >
@@ -21,19 +21,19 @@ function App() {
           setCurrentSection={setCurrentSection}
         >
           <WhoAmI />
-        </Section> */}
+        </Section>
         <Section
           id={2}
           setCurrentSection={setCurrentSection}
         >
           <Experience />
         </Section>
-        {/* <Section
+        <Section
           id={3}
           setCurrentSection={setCurrentSection}
-        >
+          >
           <Skills />
-        </Section> */}
+        </Section>
     </body>
   )
 }
