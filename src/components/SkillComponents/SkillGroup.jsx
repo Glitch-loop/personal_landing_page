@@ -18,29 +18,33 @@ function SkillGroup({skills}) {
               if (skill.groupDesign == 0){
                 return <SkillItemBlue 
                   key={item.skillName}
+                  idSkill={item.idSkill}
                   skillName={item.skillName} 
                   expertise={item.expertise} 
                   />
                 } else if (skill.groupDesign == 1){
                   return <SkillItemOrange 
                     key={item.skillName}
+                    idSkill={item.idSkill}
                     skillName={item.skillName} 
                     expertise={item.expertise} 
                     />
                 } else if (skill.groupDesign == 2){
                   return <SkillItemGreen 
                     key={item.skillName}
+                    idSkill={item.idSkill}
                     skillName={item.skillName} 
                     expertise={item.expertise} 
                     />
                 }else if (skill.groupDesign == 3){
                   return <SkillItemYellow 
                     key={item.skillName}
+                    idSkill={item.idSkill}
                     skillName={item.skillName} 
                     expertise={item.expertise} 
                     />
+                }
               }
-            }
             )}
           </div>
         </div>

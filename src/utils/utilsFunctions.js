@@ -38,6 +38,7 @@ function generateEdges(items) {
 
   return edges
 }
+
 export {
   getRandomNumber,
   generateCoordinates,

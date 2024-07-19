@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { skillVariants } from "../../utils/skillsVariants";
 
-function SkillItemGreen({skillName, expertise}) {
+function SkillItemGreen({idSkill, skillName, expertise}) {
   const [isHovered, setIsHovered] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
   const handleMouseEnter = () => {
@@ -23,6 +24,10 @@ function SkillItemGreen({skillName, expertise}) {
         whileHover={{scale: 1.2 }}
         whileTap={{scale: 0.9 }}
         transition={{duration: 0.1}}
+        initial="closed"
+        whileInView="open"
+        variants={skillVariants}
+        custom={idSkill}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleSelect}
