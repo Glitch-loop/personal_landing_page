@@ -75,6 +75,8 @@ function ContactComponent() {
               scale: 1.2,
               color: colors[5]
             }}
+            whileTap={{scale: 0.9 }}
+            target="_blank"
             href={socialNetworks.instagram}>
             <FontAwesomeIcon icon={faInstagram} />
           </motion.a>
@@ -83,15 +85,19 @@ function ContactComponent() {
               scale: 1.2,
               color: colors[6]
             }}
+            whileTap={{scale: 0.9 }}
+            target="_blank"
             href={socialNetworks.github}>
             <FontAwesomeIcon icon={faGithub} />
           </motion.a>
           <motion.a 
+            whileTap={{scale: 0.9 }}
             whileHover={{
               scale: 1.2,
               color: colors[2]
             }}
-          href={socialNetworks.linkedin}>
+            target="_blank"
+            href={socialNetworks.linkedin}>
             <FontAwesomeIcon icon={faLinkedin} />
           </motion.a>
         </div>
