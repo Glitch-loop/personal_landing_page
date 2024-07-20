@@ -9,7 +9,21 @@ import TitleSection from "../components/TitleSection"
 import DialogComponent from "../components/experienceComponent/DialogComponent"
 import ExperienceDescription from "../components/experienceComponent/ExperienceDescription"
 
+function getWidth () {
+  let device_width = window.innerWidth
+  if(device_width < 768) {
+    return 150
+  } else if(device_width < 1440) {
+    return 300
+  } else if(device_width < 2560) {
+    return 450
+  } else {
+    return 600
+  }
+}
+
 function Experience({currentSection}) {
+  getWidth()
   const [selectedExperience, setSelectedExperience] = useState(-1)
   const [nodesExperienceState, setNodesExperienceState] = useState([])
   const [edgesExperienceState, setEdgesExperienceState] = useState([])
@@ -17,7 +31,7 @@ function Experience({currentSection}) {
     = useState(generateCoordinates(nodesExperience, 300))
   const [edgesExperienceStateFull, setEdgesExperienceStateFull] = 
   useState(generateEdges(nodesExperience))
-  const [screenWidth, setScreenWidth] = useState(150)
+  const [screenWidth, setScreenWidth] = useState(getWidth())
   const [experienceToShow, setExperienceToShow] = useState(null)
   const [showDialog, setShowDialog] = useState(null)
 
@@ -25,53 +39,41 @@ function Experience({currentSection}) {
   const elementRef = useRef(null);
 
   useEffect(() => {
-    if (window.innerWidth < 300) {
-      setScreenWidth(150)
-    } else {
-      setScreenWidth(500)
-    }
-  }, [])
-
-
-  useEffect(() => {
-    if (window.innerWidth < 300) {
-      setScreenWidth(150)
-    } else {
-      setScreenWidth(500)
-    }
-
-    if (selectedExperience == -1) {
-      // // Creating the coordinates of the nodes
-      // setNodesExperienceStateFull(generateCoordinates(nodesExperience, width))
-
-      // // Creating the edges of the nodes
-      // setEdgesExperienceStateFull(generateEdges(nodesExperience))
-    } else {
-      let nodesToShow = []
-      if (selectedExperience == 0){ // Only internship experience
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
-        })
-      } else if(selectedExperience == 1) { // Only scholar service
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
-        })
-      } else if(selectedExperience == 2) { // Only Education service
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
-        })
-      } else if(selectedExperience == 3) { // Only certifications project
-        nodesToShow = nodesExperience.filter(item => {
-          if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
-        })
+    if (elementRef !== null) {
+      const { width } = elementRef.current
+      if (selectedExperience == -1) {
+        // // Creating the coordinates of the nodes
+        // setNodesExperienceStateFull(generateCoordinates(nodesExperience, width))
+  
+        // // Creating the edges of the nodes
+        // setEdgesExperienceStateFull(generateEdges(nodesExperience))
+      } else {
+        let nodesToShow = []
+        if (selectedExperience == 0){ // Only internship experience
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
+          })
+        } else if(selectedExperience == 1) { // Only scholar service
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
+          })
+        } else if(selectedExperience == 2) { // Only Education service
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
+          })
+        } else if(selectedExperience == 3) { // Only certifications project
+          nodesToShow = nodesExperience.filter(item => {
+            if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
+          })
+        }
+  
+        let sortedNodesToShow = nodesToShow.sort()
+        // Creating the coordinates of the nodes
+        setNodesExperienceState(generateCoordinates(sortedNodesToShow, width))
+  
+        // Creating the edges of the nodes
+        setEdgesExperienceState(generateEdges(sortedNodesToShow))
       }
-
-      let sortedNodesToShow = nodesToShow.sort()
-      // Creating the coordinates of the nodes
-      setNodesExperienceState(generateCoordinates(sortedNodesToShow, width))
-
-      // Creating the edges of the nodes
-      setEdgesExperienceState(generateEdges(sortedNodesToShow))
     }
   }, [selectedExperience]);
   
@@ -79,7 +81,7 @@ function Experience({currentSection}) {
     <div className="relative w-full h-full flex flex-col md:flex-row justify-center">
       {experienceToShow != null &&
         <DialogComponent openDialog={true} onClose={setExperienceToShow}>
-          <ExperienceDescription />
+          <ExperienceDescription data={experienceToShow} />
         </DialogComponent>
       }
       <div className="w-full h-full flex flex-col basis-1/3 justify-center">
@@ -122,10 +124,6 @@ function Experience({currentSection}) {
         </div>
       </div>
       <div className="w-full h-full flex basis-2/3 justify-center items-center">
-            {/* { selectedExperience == -1 ?
-              <RoadMap nodes={[]} edges={[]}/>:
-              <RoadMap nodes={[]} edges={[]}/>
-            } */}
             { selectedExperience == -1 ?
               <RoadMap 
                 nodes={nodesExperienceStateFull} 
