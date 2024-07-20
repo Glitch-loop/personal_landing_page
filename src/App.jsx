@@ -5,7 +5,7 @@ import WhoAmI from './layout/WhoAmI'
 import Section from './layout/Section'
 import Experience from './layout/Experience'
 import Skills from './layout/Skills'
-
+import WhatsNext from './layout/WhatsNext'
 
 function App() {
   const [currentSection, setCurrentSection] = useState("section0");
@@ -39,6 +39,14 @@ function App() {
           setCurrentSection={setCurrentSection}
           >
           <Skills 
+            currentSection={currentSection}
+            setCurrentSection={setCurrentSection}/>
+        </Section>
+        <Section
+          id="section4"
+          setCurrentSection={setCurrentSection}
+          >
+          <WhatsNext
             currentSection={currentSection}
             setCurrentSection={setCurrentSection}/>
         </Section>
