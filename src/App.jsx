@@ -6,6 +6,7 @@ import Section from './layout/Section'
 import Experience from './layout/Experience'
 import Skills from './layout/Skills'
 import WhatsNext from './layout/WhatsNext'
+import DialogComponent from './components/experienceComponent/DialogComponent'
 
 function App() {
   const [currentSection, setCurrentSection] = useState("section0");

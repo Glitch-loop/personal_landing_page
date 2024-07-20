@@ -9,7 +9,6 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
-import {nodesExperience, edgesExperience} from '../utils/roadMapData';
 import CircleNodeEducation from './circlesTimeLine/CircleNodeEducation';
 import CircleNodeInternship from './circlesTimeLine/CircleNodeInternship';
 import CircleNodeScholarService from './circlesTimeLine/CircleNodeScholarService';
@@ -28,13 +27,15 @@ const rfStyle = {
   background: "#1E1E1E"
 }
 
-function RoadMap({secreenWidth, edges, nodes}) {
-  // const [nodes, setNodes, onNodesChange] = useNodesState(nodesExperience);
-  // const [edges, setEdges, onEdgesChange] = useEdgesState(edgesExperience);
+function RoadMap({secreenWidth, edges, nodes, selectNode}) {
+  const onNodeClick = (event, node) => {
+    selectNode(node)
+  };
   return (
     <div 
       className='w-11/12 h-5/6 outline outline-1 outline-base-color'
     >
+      
       <ReactFlow 
         nodes={nodes} 
         edges={edges}
@@ -43,6 +44,7 @@ function RoadMap({secreenWidth, edges, nodes}) {
         panOnScroll
         panOnDrag={true}
         preventScrolling={false}
+        onNodeClick={onNodeClick}
         // fitView
         // fitViewOptions={{
         //   padding: 0,

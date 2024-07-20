@@ -13,6 +13,7 @@ export default {
       'project-color-yellow': '#F1C40F',
       'project-color-green': '#2ECC71',
       'project-color-blue': '#3498DB',
+      'project-color-gray': '#B0B0B0',
       'base-color': '#D9D9D9',
       'background-color': '#121212'
     },

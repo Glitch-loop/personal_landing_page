@@ -6,6 +6,8 @@ import { nodesExperience } from "../utils/roadMapData"
 import { generateCoordinates, generateEdges } from "../utils/utilsFunctions"
 import { motion } from "framer-motion"
 import TitleSection from "../components/TitleSection"
+import DialogComponent from "../components/experienceComponent/DialogComponent"
+import ExperienceDescription from "../components/experienceComponent/ExperienceDescription"
 
 function Experience({currentSection}) {
   const [selectedExperience, setSelectedExperience] = useState(-1)
@@ -16,60 +18,70 @@ function Experience({currentSection}) {
   const [edgesExperienceStateFull, setEdgesExperienceStateFull] = 
   useState(generateEdges(nodesExperience))
   const [screenWidth, setScreenWidth] = useState(150)
+  const [experienceToShow, setExperienceToShow] = useState(null)
+  const [showDialog, setShowDialog] = useState(null)
+
 
   const elementRef = useRef(null);
 
   useEffect(() => {
-    if (elementRef.current) {
-      const { width } = elementRef.current.getBoundingClientRect();      
-      
-      setScreenWidth(width)
-      if (width < 300) {
-        setScreenWidth(150)
-      } else {
-        setScreenWidth(500)
+    if (window.innerWidth < 300) {
+      setScreenWidth(150)
+    } else {
+      setScreenWidth(500)
+    }
+  }, [])
+
+
+  useEffect(() => {
+    if (window.innerWidth < 300) {
+      setScreenWidth(150)
+    } else {
+      setScreenWidth(500)
+    }
+
+    if (selectedExperience == -1) {
+      // // Creating the coordinates of the nodes
+      // setNodesExperienceStateFull(generateCoordinates(nodesExperience, width))
+
+      // // Creating the edges of the nodes
+      // setEdgesExperienceStateFull(generateEdges(nodesExperience))
+    } else {
+      let nodesToShow = []
+      if (selectedExperience == 0){ // Only internship experience
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
+        })
+      } else if(selectedExperience == 1) { // Only scholar service
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
+        })
+      } else if(selectedExperience == 2) { // Only Education service
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
+        })
+      } else if(selectedExperience == 3) { // Only certifications project
+        nodesToShow = nodesExperience.filter(item => {
+          if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
+        })
       }
 
-      if (selectedExperience == -1) {
-        // // Creating the coordinates of the nodes
-        // setNodesExperienceStateFull(generateCoordinates(nodesExperience, width))
-  
-        // // Creating the edges of the nodes
-        // setEdgesExperienceStateFull(generateEdges(nodesExperience))
-      } else {
-        let nodesToShow = []
-        if (selectedExperience == 0){ // Only internship experience
-          nodesToShow = nodesExperience.filter(item => {
-            if (item.type === 'circle_today' || item.type === 'circle_internship') { return true } else { return false}
-          })
-        } else if(selectedExperience == 1) { // Only scholar service
-          nodesToShow = nodesExperience.filter(item => {
-            if (item.type === 'circle_today' || item.type === 'circle_scholar_service') { return true } else { return false}
-          })
-        } else if(selectedExperience == 2) { // Only Education service
-          nodesToShow = nodesExperience.filter(item => {
-            if (item.type === 'circle_today' || item.type === 'circle_education') { return true } else { return false}
-          })
-        } else if(selectedExperience == 3) { // Only certifications project
-          nodesToShow = nodesExperience.filter(item => {
-            if (item.type === 'circle_today' || item.type === 'circle_side_project') { return true } else { return false}
-          })
-        }
+      let sortedNodesToShow = nodesToShow.sort()
+      // Creating the coordinates of the nodes
+      setNodesExperienceState(generateCoordinates(sortedNodesToShow, width))
 
-        let sortedNodesToShow = nodesToShow.sort()
-        // Creating the coordinates of the nodes
-        setNodesExperienceState(generateCoordinates(sortedNodesToShow, width))
-  
-        // Creating the edges of the nodes
-        setEdgesExperienceState(generateEdges(sortedNodesToShow))
-      }
-      
-
+      // Creating the edges of the nodes
+      setEdgesExperienceState(generateEdges(sortedNodesToShow))
     }
   }, [selectedExperience]);
   
   return(
-    <div className="w-full h-full flex flex-col md:flex-row justify-center">
+    <div className="relative w-full h-full flex flex-col md:flex-row justify-center">
+      {experienceToShow != null &&
+        <DialogComponent openDialog={true} onClose={setExperienceToShow}>
+          <ExperienceDescription />
+        </DialogComponent>
+      }
       <div className="w-full h-full flex flex-col basis-1/3 justify-center">
         <div 
           className={`
@@ -118,11 +130,15 @@ function Experience({currentSection}) {
               <RoadMap 
                 nodes={nodesExperienceStateFull} 
                 edges={edgesExperienceStateFull} 
-                secreenWidth={screenWidth}/>:
+                secreenWidth={screenWidth}
+                selectNode={setExperienceToShow}
+                />:
               <RoadMap 
                 nodes={nodesExperienceState} 
                 edges={edgesExperienceState}
-                secreenWidth={screenWidth}/>
+                secreenWidth={screenWidth}
+                selectNode={setExperienceToShow}
+                />
             }
       </div>
     </div>
