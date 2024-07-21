@@ -3,7 +3,7 @@ import RoadMap from "../components/RoadMap"
 import IndexComponent from "../components/IndexComponent"
 import Glossarycomponent from "../components/Glossarycomponent"
 import { nodesExperience } from "../utils/roadMapData"
-import { generateCoordinates, generateEdges } from "../utils/utilsFunctions"
+import { generateCoordinates, generateEdges, generateId } from "../utils/utilsFunctions"
 import { motion } from "framer-motion"
 import TitleSection from "../components/TitleSection"
 import DialogComponent from "../components/experienceComponent/DialogComponent"
@@ -23,17 +23,15 @@ function getWidth () {
 }
 
 function Experience({currentSection}) {
-  getWidth()
   const [selectedExperience, setSelectedExperience] = useState(-1)
   const [nodesExperienceState, setNodesExperienceState] = useState([])
   const [edgesExperienceState, setEdgesExperienceState] = useState([])
   const [nodesExperienceStateFull, setNodesExperienceStateFull] 
-    = useState(generateCoordinates(nodesExperience, 300))
+    = useState(generateCoordinates(generateId(nodesExperience), 300))
   const [edgesExperienceStateFull, setEdgesExperienceStateFull] = 
-  useState(generateEdges(nodesExperience))
+  useState(generateEdges(generateId(nodesExperience)))
   const [screenWidth, setScreenWidth] = useState(getWidth())
   const [experienceToShow, setExperienceToShow] = useState(null)
-  const [showDialog, setShowDialog] = useState(null)
 
 
   const elementRef = useRef(null);
@@ -67,12 +65,13 @@ function Experience({currentSection}) {
           })
         }
   
-        let sortedNodesToShow = nodesToShow.sort()
+        let IdsNodesToShow = generateId(nodesToShow)
+        
         // Creating the coordinates of the nodes
-        setNodesExperienceState(generateCoordinates(sortedNodesToShow, width))
+        setNodesExperienceState(generateCoordinates(IdsNodesToShow, width))
   
         // Creating the edges of the nodes
-        setEdgesExperienceState(generateEdges(sortedNodesToShow))
+        setEdgesExperienceState(generateEdges(IdsNodesToShow))
       }
     }
   }, [selectedExperience]);
@@ -81,7 +80,7 @@ function Experience({currentSection}) {
     <div className="relative w-full h-full flex flex-col md:flex-row justify-center">
       {experienceToShow != null &&
         <DialogComponent openDialog={true} onClose={setExperienceToShow}>
-          <ExperienceDescription data={experienceToShow} />
+          <ExperienceDescription experience={experienceToShow} />
         </DialogComponent>
       }
       <div className="w-full h-full flex flex-col basis-1/3 justify-center">

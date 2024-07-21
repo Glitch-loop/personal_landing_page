@@ -8,7 +8,6 @@ const CircleNodeEducation = ({data, id}) => {
       whileHover={{scale: 1.1}}
       whileTap={{ scale: 0.9 }}
       className='flex flex-row items-center cursor-pointer'
-      onClick={() => {console.log("Hola mundo")}}
       >
       <div>
         <div 

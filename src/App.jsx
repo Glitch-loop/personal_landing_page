@@ -11,7 +11,7 @@ import DialogComponent from './components/experienceComponent/DialogComponent'
 function App() {
   const [currentSection, setCurrentSection] = useState("section0");
   return (
-    <div className='overflow-x-hidden'>
+    <div>
         <Section
           id="section0"
           setCurrentSection={setCurrentSection}

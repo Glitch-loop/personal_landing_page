@@ -1,3 +1,4 @@
+
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -46,8 +47,17 @@ function generateEdges(items) {
   return edges
 }
 
+
+function generateId(items) {
+  for(let i = 0; i < items.lenght; i++) {
+    items[i].id = JSON.stringify(i)
+  }
+
+  return items
+}
 export {
   getRandomNumber,
   generateCoordinates,
-  generateEdges
+  generateEdges,
+  generateId
 }

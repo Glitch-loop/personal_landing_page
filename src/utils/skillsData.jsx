@@ -84,7 +84,7 @@ const developingSkills = [
       },
       {
         idSkill: 6,
-        skillName: "NodeJs",
+        skillName: "NodeJS",
         expertise: "83"
       },
     ]
