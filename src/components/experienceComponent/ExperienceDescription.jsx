@@ -35,6 +35,7 @@ function ExperienceDescription({experience}) {
         :
         <div className={`
             flex flex-col text-sm 
+            cursor-default
             items-start justify-start 
             w-11/12
             text-wrap

@@ -45,7 +45,7 @@ function DialogComponent({ openDialog, onClose, children }) {
                   <FontAwesomeIcon icon={faX} />
                 </motion.div>
               </div>
-              <div className="flex flex-col basis-11/12 max-w-full overflow-y-auto">
+              <div className="flex flex-col basis-11/12 max-w-full overflow-x-hidden overflow-y-auto">
                 {children}
               </div>
             </div>
