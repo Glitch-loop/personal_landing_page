@@ -14,8 +14,8 @@ const TypewriterComponent = () => {
         onInit={(typewriter) => {
           words.forEach((word, index) => {
             let indexColor = index
-            if (indexColor > colors.length - 1) {
-              indexColor = indexColor % colors.length
+            if (indexColor > colors.length - 2) {
+              indexColor = indexColor % (colors.length - 2)
             } 
 
             typewriter
