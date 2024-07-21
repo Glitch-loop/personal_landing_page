@@ -11,7 +11,7 @@ import DialogComponent from './components/experienceComponent/DialogComponent'
 function App() {
   const [currentSection, setCurrentSection] = useState("section0");
   return (
-    <body className='overflow-x-hidden'>
+    <div className='overflow-x-hidden'>
         <Section
           id="section0"
           setCurrentSection={setCurrentSection}
@@ -51,7 +51,7 @@ function App() {
             currentSection={currentSection}
             setCurrentSection={setCurrentSection}/>
         </Section>
-    </body>
+    </div>
   )
 }
 

@@ -2,8 +2,12 @@ const nodesExperience = [
   {
     id: '0',
     type: 'circle_today',
-    data: { label: 'Today' },
+    data: { 
+      label: 'Today',
+      information: 'Hwllo world'
+    },
     position: { x: 0, y: 0 },
+    more_information: 'Hello world this is a message that describes thiss experience'
   },
   {
     id: '1',
@@ -37,54 +41,60 @@ const nodesExperience = [
   },
   {
     id: '6',
+    type: 'circle_scholar_service',
+    data: { label: 'Renovating Tec de Monterrey web site - Jan 2023 to June 2023'},
+    position: { x: 300, y: 600 },
+  },
+  {
+    id: '7',
     type: 'circle_education',
     data: { label: 'Certalytics Project - Jan 2023 to June 2023'},
     position: { x: 300, y: 700 },
   },
   {
-    id: '7',
+    id: '8',
     type: 'circle_education',
     data: { label: 'Scrum fundamentals Certified - April 2023'},
     position: { x: 300, y: 800 },
   },
   {
-    id: '8',
+    id: '9',
     type: 'circle_education',
     data: { label: 'White belt Six Sigma - March 2023'},
     position: { x: 300, y: 900 },
   },
   {
-    id: '9',
+    id: '10',
     type: 'circle_scholar_service',
     data: { label: 'Banco de trabajo - Jan 2022 to Dec 2022'},
     position: { x: 300, y: 1000 },
   },
   {
-    id: '10',
+    id: '11',
     type: 'circle_education',
     data: { label: 'Rolac Project - Aug 2022 to Oct 2022 '},
     position: { x: 300, y: 1100 },
   },
   {
-    id: '11',
+    id: '12',
     type: 'circle_education',
     data: { label: 'Multiagent simulation project - Oct 2022 to Dec 2022'},
     position: { x: 300, y: 1200 },
   },
   {
-    id: '12',
+    id: '13',
     type: 'circle_side_project',
     data: { label: 'Financial analysis project - March 2021'},
     position: { x: 300, y: 1300 },
   },
   {
-    id: '13',
+    id: '14',
     type: 'circle_education',
     data: { label: 'Software Development Processes and Methodologies - Dec 2020'},
     position: { x: 300, y: 1400 },
   },
   {
-    id: '14',
+    id: '15',
     type: 'circle_education',
     data: { label: 'Software architecture - Dec 2020'},
     position: { x: 300, y: 500 },
