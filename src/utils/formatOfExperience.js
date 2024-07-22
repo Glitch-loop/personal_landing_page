@@ -9,6 +9,7 @@ const formatOfExperience = {
     duration: "",
     teamSize: "",
     technologies: [""],
+    linkDescription: "",
     linkToApplication: "",
     description: "",
     messageForResponsabilities: "",

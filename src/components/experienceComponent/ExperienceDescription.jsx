@@ -91,10 +91,11 @@ function ExperienceDescription({experience}) {
             />
           }
           {/* Link to application */}
-          { experience.moreInformation.linkToApplication !== '' &&
+          { (experience.moreInformation.linkToApplication !== ''
+            && experience.moreInformation.linkDescription !== '') &&
             <ExperienceLinkItem
-              nameItem={"Link to application"}
-              message={"Go to application"}
+              nameItem={"Direct link"}
+              message={experience.moreInformation.linkDescription}
               link={experience.moreInformation.linkToApplication}
             />
           }
