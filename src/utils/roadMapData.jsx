@@ -74,7 +74,26 @@ const nodesExperience = [
     type: 'circle_today',
     data: { label: 'Today' },
     position: { x: 0, y: 0 },
-    more_information: 'Hello world this is a message that describes thiss experience'
+    moreInformation: {
+      title: "Today",
+      linkPhoto: "",
+      role: "",
+      duration: "",
+      teamSize: "",
+      technologies: [""],
+      linkDescription: "",
+      linkToApplication: "",
+      description: `Hi, I hope you are well and that you find my professional career interesting, continue enjoying the journey :D`,
+      messageForResponsabilities: "",
+      responsabilities: [""],
+      messageForChallenges: ``,
+      principalChallenges: [""],
+      messageForLearning: ``,
+      learnings: [""],
+      messageForImpacts: "",
+      impacts: [``],
+      futureScope: ""
+    }
   },
   {
     id: '1',
@@ -82,7 +101,7 @@ const nodesExperience = [
     data: { label: 'Personal landing page - Jule 2024' },
     position: { x: 100, y: 200 },
     moreInformation: {
-      title: "Personal landing page",
+      title: "Personal landing page (Web development)",
       linkPhoto: "",
       role: "Frontend Developer.",
       duration: "1 Week.",
@@ -108,6 +127,27 @@ const nodesExperience = [
     type: 'circle_education',
     data: { label: 'Bachelor\'s Degree in Computer Science Technologies - Aug 2020 to Jun 2024' },
     position: { x: 200, y: 300 },
+    moreInformation: {
+      title: "Bachelor\'s Degree in Computer Science Technologies",
+      linkPhoto: "",
+      role: "",
+      duration: "4 Years (August 2020 to June 2024)",
+      teamSize: "",
+      technologies: [""],
+      linkDescription: "Go to degree",
+      linkToApplication: "https://certificados.tec.mx/certificate/1bf9d3edd05a5cb2b9dc176d609dcb3f ",
+      description: `Although at first I had many options to study, in the end I chose to study engineering, the fact of being able to understand the fundamentals to be able to make great applications, understand how the industry is currently developing and the experience of being able to use all these technologies that were coming out, all of them were my main reasons why I decided to venture into this career, a career that I am deeply grateful for having chosen and, above all, completed.`,
+      messageForResponsabilities: "",
+      responsabilities: [""],
+      messageForChallenges: ``,
+      principalChallenges: [""],
+      messageForLearning: `The objective of this career was to become an engineer capable of creating solutions for problems that the world currently has and as such I learned many methodologies, technologies and techniques to make dreams come true.
+      But I also believe that having studied this degree helped me to be able to see life in a different way, being able to conclude something that lasted years helps me give another meaning to what "effort" and "dedication" are, and above all it helped me to better appreciate the people around me.`,
+      learnings: [""],
+      messageForImpacts: ``,
+      impacts: [''],
+      futureScope: ""
+    }
   },
   {
     id: '3',
@@ -120,18 +160,83 @@ const nodesExperience = [
     type: 'circle_education',
     data: { label: 'AWS Cloud Practitioner Essentials - May 2024'},
     position: { x: 300, y: 500 },
+    moreInformation: {
+      title: "Scrum fundamentals Certification",
+      linkPhoto: "",
+      role: "",
+      duration: "2 Weeks",
+      teamSize: "",
+      technologies: [""],
+      linkDescription: "Go to certificate",
+      linkToApplication: "https://drive.google.com/file/d/1UpyWPLzr7DcSDGsSDgPaz_DDihBQHVTV/view?usp=sharing",
+      description: `This certification was provided by AWS and covered fundamentals of the AWS cloud (services they provide and philosophy of how AWS works).
+      I found this certification interesting because it allowed me to understand what AWS cloud really is (at that time I had used computing and networking services provided by them but I had no idea idea how massive AWS was and somehow how it works).
+      It covered several topics and mote than going into depth about all the services, the course was more about knowing what you can find in AWS and depending on your needs you can opt by one service or another.
+      There were just three topics that were not related to services and they where physical infrastructure, the "well-architected framework" (how to deply robust cloud applications) and  the AWS responsability model.`,
+      messageForResponsabilities: "",
+      responsabilities: [""],
+      messageForChallenges: ``,
+      principalChallenges: [""],
+      messageForLearning: `At the end of my degree I found interesting the DevOps aspect of the project, so wanting to know more about the topic is that I decided to make the course and I have to say that I learnt a lot, in fact I considered  this course as an introduction of DevOps.`,
+      learnings: ["Core concepts AWS cloud.", "Learn about computing services.", "Learn about network services.", "Learn about databases services.", "How AWS infrastructure works.", "Well-architected framework.", "AWS responsibility model."],
+      messageForImpacts: ``,
+      impacts: [``],
+      futureScope: ""
+    }
   },
   {
     id: '5',
     type: 'circle_internship',
     data: { label: 'Internship at Bosch - June 2023 to May 2024'},
     position: { x: 300, y: 600 },
+    moreInformation: {
+      title: "Internship at Bosch (Embedded systems)",
+      linkPhoto: "",
+      role: "Software engineer internship.",
+      duration: "11 months (June 2023 to May 2024)",
+      teamSize: "",
+      technologies: ["C/C++", "Cantata", "Python"],
+      linkDescription: "",
+      linkToApplication: "",
+      description: ``,
+      messageForResponsabilities: "",
+      responsabilities: [""],
+      messageForChallenges: ``,
+      principalChallenges: [""],
+      messageForLearning: ``,
+      learnings: [""],
+      messageForImpacts: ``,
+      impacts: [""],
+      futureScope: ""
+    }
   },
   {
     id: '6',
     type: 'circle_scholar_service',
     data: { label: 'Renovating Tec de Monterrey web site - Jan 2023 to June 2023'},
     position: { x: 300, y: 600 },
+    moreInformation: {
+      title: "Renovating Tec de Monterrey web site (DevOps)",
+      linkPhoto: "",
+      role: "DevOps engineer.",
+      duration: "6 months (January 2023 to June 2023)",
+      teamSize: "2 members",
+      technologies: ["RubyOnRails", "Postgress", "Docker"],
+      linkDescription: "",
+      linkToApplication: "",
+      description: `In this social service, I helped Tecnologico de Monterrey to be able to rescue an application which they had to abandon years ago.
+      The application in question was a webpage that allowed users (high school students) to find their calling by providing them with a range of possible careers that they could study.
+      Given that it was a somewhat old application and due to the lack of documentation, it was very difficult to rescue the application (in fact it could only be partially rescued).`,
+      messageForResponsabilities: "There was the idea that I would join the social service as a developer, but since I didn't even run the development server, I worked more as a devops engineer (basically doing reverse engineering to understand how the application worked and to run the application)",
+      responsabilities: ["Reverse engineering.", "Make documantation related to the project.", "Update docker container."],
+      messageForChallenges: `Given that it was an application that had not been maintained for 6 - 7 years, there were really many difficulties when it came to getting the server up and running (so much so that I had to ask for help from someone with more experience using RubyOnRails and docker. .. We only managed to get the app working partially).`,
+      principalChallenges: ["Lack of knowledge using Ruby on Rails framework", "Lack of knowledge using Docker", "Lack of documentation."],
+      messageForLearning: `This social service was a little satisfactory since I did not achieve the objective of being able to make the application work, however, that is what they say, you learn more from failure than from success and boy did I take several lessons from this social service.`,
+      learnings: ["Understand the importance of documentation for legacy project.", "An introduction to Docker.", "Asking help when you get stuck.", "Introdunction to RubyOnRails.", "Communicate effectively the limitations of your time and knowledge."],
+      messageForImpacts: ``,
+      impacts: [""],
+      futureScope: ""
+    }
   },
   {
     id: '7',
@@ -145,22 +250,27 @@ const nodesExperience = [
     data: { label: 'Scrum fundamentals Certified - April 2023'},
     position: { x: 300, y: 800 },
     moreInformation: {
-      title: "White belt Lean Six Sigma Certification",
+      title: "Scrum fundamentals Certification",
       linkPhoto: "",
       role: "",
       duration: "1 Day",
       teamSize: "",
       technologies: [""],
-      linkDescription: "Go to certification",
+      linkDescription: "Go to certificate",
       linkToApplication: "https://drive.google.com/file/d/1UY-NAWomGh8cYDt1QPzBT6E3rIfgH1kI/view?usp=drive_link",
-      description: ``,
+      description: `I took this certification as a part of a course that I had in my career.
+      The certification was about the fundamentals of scrum "what it is" and "how to apply it effectively in the team".
+      Although I knew about the subject, because I had taken courses previously, this certification allowed me to consolidate the knowledge I had by learning in depth about the agile methodology and obtaining a couple of useful tools that have helped me a lot such as; time-boxing or risk management.
+
+      The course was provided by SCRUMstudy a renowned organization that teaches about agile methodologies and other topics related to project management.`,
       messageForResponsabilities: "",
       responsabilities: [""],
       messageForChallenges: ``,
       principalChallenges: [""],
-      messageForLearning: ``,
-      learnings: [""],
-      messageForImpacts: `I think the most important experience that I learnt from this course was the importance of the quality process to guarantee product quality and the importance of measuring the defects you found in your production line (something that will lead you to improve the efficiency of the company while ensureing better products for the customer).`,
+      messageForLearning: `Since I am really into project management and software architecture, this course was especially impactful and it showed that although I knew something about the methodology and project management in general (at least the basics of applying it) there were a lot of aspect that I was ignoring about this methodology.
+      Perhaps one of the most important learnings of this course was not in the methodology itself but in continuing to study and try to delve deeper into topics that I find interesting.`,
+      learnings: ["Agile methodologies principles (review).", "Risk management.", "Sprint plannification methodologies.", "Core concepts of SCRUM."],
+      messageForImpacts: ``,
       impacts: [``],
       futureScope: ""
     }
@@ -177,7 +287,7 @@ const nodesExperience = [
       duration: "1 Day",
       teamSize: "",
       technologies: [""],
-      linkDescription: "Go to certification",
+      linkDescription: "Go to certificate",
       linkToApplication: "https://drive.google.com/file/d/1v9M-nxsgLU7klqrGvzEMxBmjid13Ja0L/view?usp=sharing",
       description: ``,
       messageForResponsabilities: "",
@@ -200,29 +310,81 @@ const nodesExperience = [
   {
     id: '10',
     type: 'circle_scholar_service',
-    data: { label: 'Banco de trabajo - Jan 2022 to Dec 2022'},
+    data: { label: 'Banco de empleos - Jan 2022 to Dec 2022'},
     position: { x: 300, y: 1000 },
+    moreInformation: {
+      title: "Banco de empleos (Web Development)",
+      linkPhoto: "",
+      role: "Frontend developer | Team support",
+      duration: "1 Year (January 2022 to December 2022)",
+      teamSize: "4 members",
+      technologies: ["AngularJS", "Flask", "Tailwind", "Postgress"],
+      linkDescription: "Go to github repo",
+      linkToApplication: "https://github.com/eder000000/JcEDev",
+      description: `This was my first social service that I did and which was aimed at developing a web application that helped people find employment.
+      This was a secondary project of the non-profit organization 'Food Bank' which aims in the first phase to eradicate unemployment at the Jalisco level, with the aim of having an impact at the national level.
+      The application in question aims to ensure that people with technical and professional skills can share their talents, and that people who need such services can have a safe place to hire trusted people.`,
+      messageForResponsabilities: "Although I had a frontend developer role, the truth is that I also worked in areas related to project administration.",
+      responsabilities: ["Gathering requirements.", "Having tracking about what to do according with the meeting with 'Banco de alimentos'.", "Design of the roles scheme that was going to use the application.", "Helping to develop components of the frontend application."],
+      messageForChallenges: ``,
+      principalChallenges: ["Lack of knowledge in the use of AngularJS", "Inconsistencies when working on sprint objectives (blocker from mangament area)."],
+      messageForLearning: `This social service helped me a lot in my professional career since it was my first "real" approach to the world of development.
+      The fact of contributing to an application with the objectives of having a real impact on society motivated me to help the project a little more than necessary and to work in areas outside of the development itself.`,
+      learnings: ["Getting aware about the importance of effective listening.", "Get a better understanding about engineering requirements.", "Acknowledge of the imporante of the planning for a sprint.", "Acknowledge of the imporante really understand the users requirements.", "Have a 'real' application of scrum framework.", "Learning tailwind.", "Learning React Native.", "Getting an idea of how to carry out a mobile development."],
+      messageForImpacts: `Unfortunately, due to administrative issues (related to hosting) the project was stopped just before being launched, something that made me very sad since the project came from a very well-known organization (Banco de alimentos), this would have helped to have a great impact since its beginnings.`,
+      impacts: [""],
+      futureScope: ""
+    }
   },
   {
+
     id: '11',
     type: 'circle_education',
     data: { label: 'Rolac Project - Aug 2022 to Oct 2022 '},
     position: { x: 300, y: 1100 },
+    moreInformation: {
+      title: "Rolac Project (Mobile Development)",
+      linkPhoto: "",
+      role: "Fullstack developer | SCRUM master",
+      duration: "3 Months (August 2021 to Octuber 2021)",
+      teamSize: "5 members",
+      technologies: ["React Native", "Firebase", "Figma", "Tailwind"],
+      linkDescription: "Go to demostration video",
+      linkToApplication: "https://www.youtube.com/watch?v=Gq-PVjziytk",
+      description: `This project was a mobile development aimed at meeting the needs of "Banco de Alimentos" our teaching partner; Banco de Alimentos is a non-profit organization that helps those who need it most. They have two main activities, fundraising (to buy supplies) and food collection (food collected from the organization's allies). 
+
+      At that time the organization was facing two problems: The first was to improve the mechanism for collecting food from their allies. And the second, make people aware of the donation that they made to the organization.
+      
+      After an feasibility analysis, we decided to make an application that helps in these two problems; On the collecting side we deicded to implement a functionality in which it will provide the driver with the best way to follow on the route (he had to go to vrious parts of the city to collect all the food) in a way we were automated the process that they had to carry out before starting the route (route planning). And the second was a catalog that helps people know what they were donating... So instead of just being a number on a screen, the user had a menu with the food equivalent of what he was donating.
+      `,
+      messageForResponsabilities: "",
+      responsabilities: ["Team organization.", "Design and implementation of the database.", "Implementation of authentication mechanism.", "Gathering software requirements", "Helping to develop parts of the application."],
+      messageForChallenges: `Unfortunately, at the beginning of this project we had ambiguous requirements, we didn't understand what they really wanted, it was not until a couple of session with them that we were finally able to have a useful product (or at least the idea of one).
+      Like in all the projects, the technical aspect was a challenging factor for us, but personally, as I was the scrum master of the team I found it difficult to provide an effective organization to the team, gather the requirements and in a way provide a feeling that the project was advanced.
+      In the end, at least from my perspective this project taugh me lesson about leadership and organization rather than technology one.`,
+      principalChallenges: ["Ambiguous organization.", "Lack of effective organization.", "Effective listening.", "Lack of technical knowledge."],
+      messageForLearning: `The first and most obvious learning that we had form the project was related to how to make a mobile application. Although I found interesting these learnings I consider the soft skills that this project taught me to be more important (soft skills related to listenning, plannification and motivation).`,
+      learnings: ["Getting aware about the importance of effective listening.", "Get a better understanding about engineering requirements.", "Acknowledge of the imporante of the planning for a sprint.", "Acknowledge of the imporante really understand the users requirements.", "Have a 'real' application of scrum framework.", "Learning tailwind.", "Learning React Native.", "Getting an idea of how to carry out a mobile development."],
+      messageForImpacts: `Despite the difficulties we had throughout the project, in the end we were able to deliver a "functional" prototype of the idea that we had. 
+      Maybe the application was not ready to deploy, but at least we were able to provide an idea of how to automate the route planning and a proposal of the fundraising catalog.`,
+      impacts: ['Provide an idea of how to automate the route planning', 'Provide a tool to make easier what is the next allie to visit.', 'Provide a catalog that makes people aware of their donations.'],
+      futureScope: ""
+    }
   },
   {
     id: '12',
     type: 'circle_education',
-    data: { label: 'Simulating an cross-intersection project - Oct 2022 to Dec 2022'},
+    data: { label: 'Simulating a cross-intersection project - Oct 2022 to Dec 2022'},
     position: { x: 300, y: 1200 },
     moreInformation: {
-      title: "Simulating an cross-intersection project",
+      title: "Simulating an cross-intersection project (Simulation)",
       linkPhoto: "",
       role: "Backend developer",
       duration: "2 Months (November 2022 to December 2022)",
       teamSize: "5 members",
       technologies: ["Python", "Flask", "Agentpy", "Heroku"],
-      linkDescription: "",
-      linkToApplication: "",
+      linkDescription: "Go to demostration video",
+      linkToApplication: "https://www.youtube.com/watch?v=px5B41TLdg8",
       description: `This project was one of my favourites ones of the entire career, in this we had the opportunity to design a multi-agent system to simulate a cross-intersection. Although, it sound simply and without major implication, it was a great challange at the moment of implement it.
 
       Although they are different fields, they are very related (at least fundamentally) and I'm referring to the Artificial Intelligence (IA) and the design of complex simulations (such as multi-agents). 
@@ -247,7 +409,7 @@ const nodesExperience = [
     data: { label: 'Financial analysis project - March 2021'},
     position: { x: 300, y: 1300 },
     moreInformation: {
-      title: "Financial analysis project",
+      title: "Financial analysis project (Web development)",
       linkPhoto: "",
       role: "Backend developer",
       duration: "3 Months (January 2021 to March 2021)",
@@ -286,7 +448,7 @@ const nodesExperience = [
       duration: "2 Week",
       teamSize: "",
       technologies: [""],
-      linkDescription: "Go to certification",
+      linkDescription: "Go to certificate",
       linkToApplication: "https://www.coursera.org/account/accomplishments/verify/VV32R6KMJP7A",
       description: ``,
       messageForResponsabilities: "",
@@ -313,7 +475,7 @@ const nodesExperience = [
       duration: "1 Week",
       teamSize: "",
       technologies: [""],
-      linkDescription: "Go to certification",
+      linkDescription: "Go to certificate",
       linkToApplication: "https://www.coursera.org/account/accomplishments/verify/H2M5J5KFE37W",
       description: `I remember when I was studying my degree (Computer Technology Engineering) that software architecture caught my attention. 
       Although I enjoy developing systems and making application, I prefer to be in the system design side, making decision related to the "why" and "how" the system should to be created (although software architecture is more related to the "why" rather than "how").
