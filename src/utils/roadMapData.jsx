@@ -152,8 +152,33 @@ const nodesExperience = [
   {
     id: '3',
     type: 'circle_side_project',
-    data: { label: 'Friend\'s friend project - May 2024'},
+    data: { label: 'Friend\'s friend project - June 2023 - June 2024'},
     position: { x: -300, y: 400 },
+    moreInformation: {
+      title: "Friend\'s friend project (Web development)",
+      linkPhoto: "./src/assets/Organization_of_the_team.jpg",
+      role: "Software engineer | Fullstack developer",
+      duration: "1 Year (June 2023 to June 2024)",
+      teamSize: "",
+      technologies: ["Typescript", "ReactJS", "Tailwind", "Cloud engine", "JWT", "Supabase", "NodeJS", "DocumentIA", "Textract"],
+      linkDescription: "Go to repo of the project",
+      linkToApplication: "https://github.com/Glitch-loop/structure_management_interface",
+      description: `Of all the projects, this has been one of the ones that has had the most "impact" in question to the purpose for which it was created.
+      The project aims to allow people to exercise politics and know exactly who their team is.
+      In the context of politics there is a term called "structure", which refers to the team that follows you and that will join at the time of the elections (not necessarily affiliated).
+      The fact is that in order to keep this type of records (which tend to be arboreal, since it is a leader-follower relationship) it is very complicated to keep it in excel sheets or similar, having to invest a lot of time in organizing the information and above all preserve it (caspi always ending up more like a "set" than a "tree").
+      Personally, I have always liked the topic of sociology and how technology has an impact on society. Together with a friend who had a different theory of the modus operandi to exercise politics, we agreed that I was going to provide him with the application (or infrastructure) to carry out this experiment, as the application is called "the friend of the friend", an application that It would allow us to monitor the "structures" that a team has in order to carry out a clear and safe campaign.`,
+      messageForResponsabilities: "For this project I wanted to gain experience in full stack development, so in my free time I dedicated the necessary effort to be able to move the project forward.",
+      responsabilities: ["Designing and implementing the system", "Gathering the requiremetns for the application"],
+      messageForChallenges: `Since I play both developer and administrator roles, I can say that I faced many challenges throughout the development of this application.
+      The fact that I was alone against the project made it quite difficult for me to move it forward (and even more so because of the purpose it had, so it was not very easy to get help), so I can say that although I had many technical challenges, I believe that where I really struggled the most was in creating an effective design that could cover the needs of the project, in fact, only in the design phase did it take between a fortnight and a month (since I knew from previous experiences that an error at the beginning of the project would cost quite expensive and would require a lot of time to correct, something I could not afford due to my other activities; school and internship).`,
+      principalChallenges: ["Determining the design of the project.", "Refinig ambiguous requirements.", "Lack of technical knowledge related to frontend.", "Little time to testing the application.", "Provide relevant functionalities to satisfy the needs of the prject.", "Lack of knowledge about geospatial data."],
+      messageForLearning: `This was really a quite integrative project, since I had the opportunity to implement the entire software cycle, it was something very big for a single person to implement, but in the end thanks to this project I was able to give myself the courage to not only be a "developer" but rather being a "software engineer", who could provide a solution to a real problem, in fact I consider this project as my unofficial graduation from the career since I demonstrated to myself what I am capable of doing. project for the real world.`,
+      learnings: ["Realizing the importance of a good planification for a project.", "Understand the importance of be clear with your stakeholder.", "Have hands-on experience implementing a real product from scratch", "Realizing the importance of the testing phase."],
+      messageForImpacts: `Although it was used in a real context, given that a theory was being tested in order to make politics, it was limited to the group with which the project is being carried out, which even takes away a little of its merit, really. It had a significant impact on both the team and the results of the campaign on this occasion.`,
+      impacts: ["Be able to provide team members with information about their structure in \"real time.\"", "To be able to provide the information that the party to which you are affiliated would provide you (so that when we were given the information about the voting booths, the team through the program had already done it a fortnight before).", "Have a granular organization on election day (know which follower goes with which leader and which box each follower has to go to).", "You, as the team leader, know in a reliable way who contributed the most people to the team.", "Be a reference on how politics can be done \"by word of mouth.\""],
+      futureScope: "In the end, as a team, we managed to gather between 700 and 800 votes (considering that we are a small team and limited in resources), it is normal for a team with \"resource\" to be between 1000 and 1,500 votes, so it could be considered that it was a success... Although this sounds good, it is necessary to remember that this was a prototype and that it was enclosed to the team in order to measure its effectiveness. Given the results, it is planned that in the following elections it will be used in a more \"massive\" way, trying to cover more teams within the party in which they are going to work."
+    }
   },
   {
     id: '4',
