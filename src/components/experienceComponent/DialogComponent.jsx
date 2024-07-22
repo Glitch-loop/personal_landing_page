@@ -20,7 +20,9 @@ function DialogComponent({ openDialog, onClose, children }) {
           }}
           className="w-full h-full absolute text-background-color inset-0 flex flex-col justify-center items-center z-20 overflow-y-hidden overflow-x-hidden">
             {/* Container of the dialog */}
-            <div className="flex flex-col w-3/4 sm:w-2/4 h-5/6 bg-base-color rounded-lg">
+            <div 
+              onClick={(e) => {e.stopPropagation();}}
+              className="flex flex-col relative w-3/4 sm:w-2/4 h-5/6 bg-base-color rounded-lg">
               {/* Close item */}
               <div className="flex flex-row basis-1/12 mt-5 mr-5 md:mr-10 justify-end items-start">
                 <motion.div

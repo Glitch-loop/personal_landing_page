@@ -40,7 +40,7 @@ function ExperienceDescription({experience}) {
             w-11/12
             text-wrap
             flex-wrap
-            mx-3 md:mx-10
+            mx-3 md:mx-5
 
           `}>
           {/* Title */}
@@ -53,10 +53,12 @@ function ExperienceDescription({experience}) {
           </span>
           {/* Photo */}
           { experience.moreInformation.linkPhoto !== '' &&
-            <img 
-              className="rounded-lg my-3"
-              src={experience.moreInformation.linkPhoto} 
-              alt="Descriptive image of the project."/>
+            <div className="flex flex-row w-full items-center justify-center">
+              <img 
+                className="rounded-lg my-3 flex"
+                src={experience.moreInformation.linkPhoto} 
+                alt="Descriptive image of the project."/>
+            </div>
           }
           {/* Role/Position */}
           { experience.moreInformation.role !== '' &&
