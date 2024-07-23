@@ -11,7 +11,7 @@ function AboutMessageComponent() {
       <motion.div 
         className="flex flex-col"
         initial={{ color: "rgba(217, 217, 217, 1)" }}
-        whileInView={{ color: "rgba(217, 217, 217, 0.1)" }}
+        whileInView={{ color: "rgba(217, 217, 217, 0.5)" }}
         transition={{duration: 2, delay: 10}}
         viewport={{once: true}}
       >
