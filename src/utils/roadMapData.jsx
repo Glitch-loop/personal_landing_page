@@ -96,6 +96,36 @@ const nodesExperience = [
     }
   },
   {
+    id: '16',
+    type: 'circle_education',
+    data: { label: 'Oracle Cloud Infrastructure (OCI) 2024 Generative AI Certified Professional - Jule 2024'},
+    position: { x: 300, y: 900 },
+    moreInformation: {
+      title: "Oracle Cloud Infrastructure (OCI) 2024 Generative AI Certified Professional",
+      linkPhoto: "",
+      role: "",
+      duration: "1 Month",
+      teamSize: "",
+      technologies: [""],
+      linkDescription: "Go to certificate",
+      linkToApplication: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=3D3BB3450E17FCB9BE8AEE30A6E38D220FC49ED590AA3DE1A44ACA97A919D2C5",
+      description: `To be honest, I hadn't planned on taking this certificate. I wanted to take a certificate related to artificial intelligence, but I couldn't decide which one to take.
+      It wasn't that I was looking at posts on LinkedIn that this opportunity came up, so I didn't hesitate to take it.
+      The certificate is about Large Language Models. Before taking it, you had to take a course on the subject. Although it was aimed at using the Oracle infrastructure, it was a fairly complete course.
+      The course already assumed that you had an intermediate level of Python and knew the basics of Artificial Intelligence, so they went straight to explaining what an LLM consists of and how it works. They also presented topics surrounding LLMs (which are listed in the learning section).`,
+      messageForResponsabilities: "",
+      responsabilities: [""],
+      messageForChallenges: ``,
+      principalChallenges: [""],
+      messageForLearning: `As I said before, this course covered a lot of interesting topics about LLM, allowing me to have a better understanding of the subject and learn new topics that I didn't even know existed.`,
+      learnings: ["Understand Large Language Models (LLMs).", "Proficient in using OCI Generative AI Service.", "Build a Retrieval-Augmented Generation (RAG) based chatbot using OCI Generative AI Service.", "Type of trainings.", "Prompting and prompting engineering.", "Encode-Decoder architecture.", "Embedding models (vectorization of the information).", "OCI clustering for training and hosting models.", "Vector databases.", "OCI architecture for Generative AI service.", "RAG + Memory."],
+      messageForImpacts: `I believe that this certificate boosts my professional career, since it not only taught me theoretical and practical things about the subject but also helped me to be able to "validate" the knowledge that I have acquired over time in reference to AI and LLM.
+      So to speak, with this certificate I achieve 2 things; deepen my knowledge in LLM and have a certification that helps me validate what I currently know.`,
+      impacts: [``],
+      futureScope: ""
+    }
+  },
+  {
     id: '1',
     type: 'circle_side_project',
     data: { label: 'Personal landing page - Jule 2024' },
